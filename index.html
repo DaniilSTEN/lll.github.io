@@ -52,14 +52,22 @@
 			<div id="logo" class="cf">
 				<a href="index.html" ><img src="http://i-mio.org/wp-content/uploads/2016/10/Ivanovskaya-oblast.gif " alt="" /></a> 
 				<center>
-				<script type="text/javascript" src="http://www.24webclock.com/clock24.js"></script>
-<table border="0" bgcolor="#a0a0a0" cellspacing=1 cellpadding=3 class="clock24st" style="line-height:14px; padding:0;">
-<tr><td bgcolor="#FFFFFF" class="clock24std" style="font-family:arial; font-size:20px;"><a href="http://www.24webclock.com/"><img src="http://www.24webclock.com/ico.gif" width="20" height="20" border="0" alt="clock for blog" align="left" hspace="10"></a> <a href="http://www.24webclock.com/ru/" style="text-decoration:none;"><span class="clock24s" id="clock24_30115" style="color:#6393C3;"></span></a></td></tr>
-</table>
-<script type="text/javascript">
-var clock24_30115 = new clock24('30115',120,'%hh:%nn:%ss','ru');
-clock24_30115.daylight('RU'); clock24_30115.refresh();
+				<script type="text/javascript">  
+setInterval(function () {  
+ date = new Date(),  
+ h = date.getHours(),  
+ m = date.getMinutes(),  
+ s = date.getSeconds(),  
+ h = (h < 10) ? '0' + h : h,  
+ m = (m < 10) ? '0' + m : m,  
+ s = (s < 10) ? '0' + s : s,  
+ document.getElementById('time').innerHTML = h + ':' + m + ':' + s;  
+}, 1000);
 </script>
+
+<span style="color:#7e5a25; font-size:14pt; border:2px solid #e1d4ae; background:#e8e3d4; padding:5px;">
+<span id="time">00:00:00</span>
+</span>
 
 				
 				
